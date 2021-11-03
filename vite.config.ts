@@ -1,5 +1,6 @@
 import * as path from 'path'
-import { defineConfig } from 'vite'
+import { UserConfigExport, ConfigEnv } from 'vite'
+import { viteMockServe } from 'vite-plugin-mock'
 import vue from '@vitejs/plugin-vue'
 import pkg from './package.json'
 
@@ -8,17 +9,23 @@ if (process.env.NODE_ENV === 'production') {
   process.env.VITE_APP_BUILD_EPOCH = new Date().getTime().toString()
 }
 
-export default defineConfig({
-  plugins: [
-    vue({
-      script: {
-        refSugar: true,
+export default ({ command }: ConfigEnv): UserConfigExport => {
+  return {
+    plugins: [
+      vue({
+        script: {
+          refSugar: true,
+        },
+      }),
+      viteMockServe({
+        mockPath: 'mock',
+        localEnabled: command === 'serve',
+      }),
+    ],
+    resolve: {
+      alias: {
+        '@': path.resolve(__dirname, './src'),
       },
-    }),
-  ],
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, './src'),
     },
-  },
-})
+  }
+}
