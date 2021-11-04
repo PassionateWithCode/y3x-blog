@@ -15,6 +15,7 @@ export default ({ command }: ConfigEnv): UserConfigExport => {
       vue({
         script: {
           refSugar: true,
+          refTransform: true,
         },
       }),
       viteMockServe({
