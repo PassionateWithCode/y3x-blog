@@ -28,5 +28,12 @@ export default ({ command }: ConfigEnv): UserConfigExport => {
         '@': path.resolve(__dirname, './src'),
       },
     },
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: '@import "@/design/var.scss";'
+        }
+      }
+    }
   }
 }
