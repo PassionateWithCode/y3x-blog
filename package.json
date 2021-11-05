@@ -1,6 +1,7 @@
 {
   "name": "y3x",
   "version": "0.0.1",
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build:dev": "vite build --mode=development",
