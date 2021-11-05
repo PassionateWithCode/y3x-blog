@@ -11,6 +11,13 @@ if (process.env.NODE_ENV === 'production') {
 
 export default ({ command }: ConfigEnv): UserConfigExport => {
   return {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: '@import "@/design/index.scss";'
+        }
+      }
+    },
     plugins: [
       vue({
         script: {
@@ -27,13 +34,6 @@ export default ({ command }: ConfigEnv): UserConfigExport => {
       alias: {
         '@': path.resolve(__dirname, './src'),
       },
-    },
-    css: {
-      preprocessorOptions: {
-        scss: {
-          additionalData: '@import "@/design/var.scss";'
-        }
-      }
     }
   }
 }
