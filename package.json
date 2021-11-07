@@ -16,6 +16,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@iconify/iconify": "^2.0.4",
     "@vueuse/core": "^6.7.4",
     "@vueuse/head": "~0.6",
     "axios": "^0.24.0",
@@ -29,6 +30,7 @@
     "@commitlint/config-conventional": "^14.1.0",
     "@cypress/vite-dev-server": "~2.2",
     "@cypress/vue": "~3.0",
+    "@iconify/json": "^1.1.424",
     "@tailwindcss/aspect-ratio": "~0.3",
     "@tailwindcss/forms": "~0.3",
     "@tailwindcss/line-clamp": "~0.2",
@@ -64,6 +66,7 @@
     "typescript": "~4.4",
     "vite": "~2.6",
     "vite-plugin-mock": "^2.9.6",
+    "vite-plugin-purge-icons": "^0.7.0",
     "wait-on": "~6.0"
   },
   "lint-staged": {

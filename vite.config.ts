@@ -3,6 +3,7 @@ import { UserConfigExport, ConfigEnv } from 'vite'
 import { viteMockServe } from 'vite-plugin-mock'
 import vue from '@vitejs/plugin-vue'
 import pkg from './package.json'
+import PurgeIcons from 'vite-plugin-purge-icons'
 
 process.env.VITE_APP_VERSION = pkg.version
 if (process.env.NODE_ENV === 'production') {
@@ -14,7 +15,7 @@ export default ({ command }: ConfigEnv): UserConfigExport => {
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: '@import "@/design/index.scss";'
+          additionalData: '@import "@/styles/index.scss";'
         }
       }
     },
@@ -29,6 +30,9 @@ export default ({ command }: ConfigEnv): UserConfigExport => {
         mockPath: 'mock',
         localEnabled: command === 'serve',
       }),
+      PurgeIcons({
+        /* PurgeIcons Options */
+      })
     ],
     resolve: {
       alias: {

@@ -1,20 +1,20 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory } from "vue-router";
 
-import Index from '@/pages/Index.vue'
+import Index from "@/layout/blog/index.vue";
 
 const routes = [
   {
-    path: '/',
+    path: "/",
     component: Index,
     meta: {
-      title: 'y3x blog',
+      title: "y3x blog",
     },
   },
-]
+];
 
 const router = createRouter({
   history: createWebHistory(),
   routes,
-})
+});
 
-export default router
+export default router;

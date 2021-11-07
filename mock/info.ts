@@ -1,15 +1,40 @@
 import { MockMethod } from 'vite-plugin-mock'
+function useReturn(data: Recordable<unknown> | Array<unknown>, code: 0 | 1 = 1, msg = "") {
+  return {
+    code, data, msg
+  }
+}
 export default [
   {
-    url: '/api/get',
+    url: '/api/menu',
     method: 'get',
     response: () => {
-      return {
-        code: 0,
-        data: {
-          name: 'admin',
+      return useReturn([
+        {
+          title: '首页',
+          path: '/'
         },
-      }
+        {
+          title: '分类',
+          path: '/'
+        },
+        {
+          title: '标签',
+          path: '/'
+        },
+        {
+          title: '作者',
+          path: '/'
+        },
+        {
+          title: '时间线',
+          path: '/'
+        },
+        {
+          title: '测试页面',
+          path: '/'
+        },
+      ])
     },
   },
   {
