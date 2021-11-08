@@ -27,6 +27,7 @@ import { onMounted, ref } from 'vue'
 import { useDark, useToggle } from '@vueuse/core'
 import icon from '@/components/Icon.vue'
 import { getMenuData } from '@/api'
+import { is } from '@/utils'
 const isDark = useDark()
 const toggleDark = useToggle(isDark)
 type Menu = {
@@ -38,4 +39,6 @@ onMounted(async () => {
   const { data } = await getMenuData<Menu>()
   menu.value = data
 })
+console.log(is.String(""));
+
 </script>
