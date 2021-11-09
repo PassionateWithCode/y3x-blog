@@ -3,3 +3,5 @@
  * @return {boolean} description
  */
 export * from "./isType";
+export * from "./curry";
+export * from "./http";
