@@ -1,5 +1,4 @@
-/* eslint-disable @typescript-eslint/ban-types */
-export function curry(func: Function) {
+export function curry(func: (...args: any) => any) {
   return function curried(this: unknown, ...args: any[]) {
     if (args.length >= func.length) {
       return func.apply(this, args);
