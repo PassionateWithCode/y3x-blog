@@ -39,6 +39,9 @@ onMounted(async () => {
   const { data } = await getMenuData<Menu>()
   menu.value = data
 })
-console.log(is.String(""));
+const a = "asdas"
+if (is.Number("")) {
+  console.log(a.length);
+}
 
 </script>
