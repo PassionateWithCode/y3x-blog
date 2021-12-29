@@ -1,11 +1,11 @@
 import { createRouter, createWebHistory } from "vue-router";
 
-import Index from "@/layout/blog/index.vue";
+import BlogLayout from "@/layout/blog/index.vue";
 
 const routes = [
   {
     path: "/",
-    component: Index,
+    component: BlogLayout,
     meta: {
       title: "y3x blog",
     },

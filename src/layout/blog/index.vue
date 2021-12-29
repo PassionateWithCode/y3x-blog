@@ -1,8 +1,8 @@
 <template>
   <div class="w-full max-w-screen-xl min-h-screen px-5 pt-5 m-auto">
-    <base-header />
-    <base-main />
-    <base-footer />
+    <BaseHeader />
+    <BaseMain />
+    <BaseFooter/>
   </div>
 </template>
 <script setup lang="ts">
