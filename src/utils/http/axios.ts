@@ -9,16 +9,17 @@ import axios from "axios";
 import type { AxiosResponse, AxiosError } from "axios";
 import { axiosConfig, ContentTypeEnum } from "./config";
 
-const api = axios.create({
+const http = axios.create({
   baseURL: axiosConfig.BASE_URL,
   timeout: 10 * 1000,
   headers: { "Content-Type": ContentTypeEnum.JSON },
 });
 
-api.interceptors.response.use(successFn, errorFm);
+http.interceptors.response.use(successFn, errorFm);
 
 function successFn(response: AxiosResponse): AxiosResponse {
-  return response.data;
+  // 这里最好还是不要返回.data这种
+  return response;
 }
 function errorFm(error: AxiosError): Promise<Record<string, unknown>> {
   const res = error.response;
@@ -33,4 +34,4 @@ function errorFm(error: AxiosError): Promise<Record<string, unknown>> {
   return Promise.reject(error);
 }
 
-export default api;
+export default http;

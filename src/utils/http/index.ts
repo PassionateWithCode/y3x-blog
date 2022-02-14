@@ -1,15 +1,11 @@
 import http from "./axios";
 import type { AxiosResponse } from "axios";
+import type { ResultTemplate, PromiseReturnType } from "./types";
 
-export type UnknownObj = Recordable<unknown>;
-export type ResultTemplate<T = UnknownObj> = {
-  msg: string;
-  code: 0 | 1;
-  data: T;
-};
-export type PromiseReturnType<T> = (res: ResultTemplate<T>) => void;
+// 便于导入类型
+export * from "./types";
 
-export const getData = <T = UnknownObj>(
+export const get = <T = UnknownObj>(
   url: string,
   params?: UnknownObj
 ): Promise<ResultTemplate<T>> =>
@@ -26,7 +22,7 @@ export const getData = <T = UnknownObj>(
       });
   });
 
-export const postData = <T = UnknownObj>(
+export const post = <T = UnknownObj>(
   url: string,
   data: UnknownObj
 ): Promise<ResultTemplate<T>> =>
