@@ -4,3 +4,8 @@ export interface TagDetail {
   title: string;
   id: number;
 }
+
+export interface Pagination {
+  pageSize: number;
+  pageIndex: number;
+}

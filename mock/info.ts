@@ -65,10 +65,9 @@ export default [
 	{
 		url: '/api/getArticleList',
 		method: 'get',
-		timeout: 2000,
-		response: {
-			code: 0,
-			data: [
+		timeout: 1000,
+		response: () =>
+			useReturn([
 				{
 					createTime: 1644856895588,
 					author: '五毛',
@@ -102,8 +101,7 @@ export default [
 						'https://pandapro.demo.nicetheme.xyz/wp-content/uploads/2020/08/2020082616501867.jpg',
 					tag: ['前沿科技'],
 				},
-			],
-		},
+			]),
 	},
 	{
 		url: '/api/text',

@@ -1,4 +1,8 @@
-import type { TagDetail } from "../model";
+import type { TagDetail, Pagination } from "../model";
+
+export interface ArticleListParams extends Pagination {
+  categoryId?: string;
+}
 
 export type ArticleDetail = {
   createTime: number;

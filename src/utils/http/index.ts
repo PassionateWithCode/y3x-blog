@@ -7,7 +7,7 @@ export * from "./types";
 
 export const get = <T = UnknownObj>(
   url: string,
-  params?: UnknownObj
+  params?: Record<string, any>
 ): Promise<ResultTemplate<T>> =>
   new Promise((resolve, reject) => {
     http
@@ -24,7 +24,7 @@ export const get = <T = UnknownObj>(
 
 export const post = <T = UnknownObj>(
   url: string,
-  data: UnknownObj
+  data: Record<string, any>
 ): Promise<ResultTemplate<T>> =>
   new Promise((resolve, reject) => {
     http
