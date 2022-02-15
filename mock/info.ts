@@ -10,8 +10,8 @@ export default [
 	{
 		url: '/api/menu',
 		method: 'get',
-		response: () => {
-			return useReturn([
+		response: () =>
+			useReturn([
 				{
 					title: '首页',
 					path: '/',
@@ -36,8 +36,7 @@ export default [
 					title: '测试页面',
 					path: '/',
 				},
-			])
-		},
+			]),
 	},
 	{
 		url: '/api/login',
