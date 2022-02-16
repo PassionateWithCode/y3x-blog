@@ -21,9 +21,9 @@
 
 <script setup lang='ts'>
 import { NCarousel } from 'naive-ui'
-interface Carousel {
-  articleId: string
-  authorInfo: {
+export interface CarouselData {
+  articleId?: string
+  authorInfo?: {
     id: string
     name: string
   }
@@ -36,7 +36,7 @@ const backgroundImg = "url(https://pandapro.demo.nicetheme.xyz/wp-content/upload
 // const color1 = 'blue'
 
 defineProps<{
-  carouselData: Carousel[]
+  carouselData: CarouselData[]
 }>()
 </script>
 
@@ -46,7 +46,6 @@ defineProps<{
   height: 350px
   object-fit: cover
 .banner-bg
-  // background-color: v-bind(color1)
   background-image: v-bind(backgroundImg)
   background-size: cover
 </style>
