@@ -43,5 +43,11 @@
     "dist",
     "public",
     "tests"
-  ]
+  ],
+  "compilerOptions": {
+    // ...
+    "types": [
+      "naive-ui/volar"
+    ]
+  }
 }
