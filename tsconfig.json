@@ -12,7 +12,8 @@
     ],
     "types": [
       "vite/client",
-      "cypress"
+      "cypress",
+      "naive-ui/volar"
     ],
     "resolveJsonModule": true,
     "plugins": [
@@ -44,10 +45,4 @@
     "public",
     "tests"
   ],
-  "compilerOptions": {
-    // ...
-    "types": [
-      "naive-ui/volar"
-    ]
-  }
 }

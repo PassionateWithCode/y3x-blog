@@ -4,5 +4,6 @@ export interface ArticleWall {
     id: string;
     name: string;
   };
+  title: string;
   headImg: string;
 }

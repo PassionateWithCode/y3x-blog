@@ -13,8 +13,8 @@ export type ArticleDetail = {
   view_count: number;
   like_count: number;
   id: string;
-  title: number;
-  des: number;
+  title: string;
+  des: string;
   head_img: string;
   tag?: TagDetail[];
   content?: string;
