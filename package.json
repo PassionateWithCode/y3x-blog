@@ -13,8 +13,7 @@
     "test-components": "cypress open-ct",
     "test:ci": "cypress run --headless",
     "test:ci-components": "cypress run-ct",
-    "prepare": "husky install",
-    "preinstall": "npx only-allow pnpm -y"
+    "prepare": "husky install"
   },
   "dependencies": {
     "@iconify/iconify": "^2.0.4",
