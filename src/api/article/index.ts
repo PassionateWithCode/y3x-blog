@@ -1,5 +1,5 @@
 import { get } from "@/utils";
-import type { ArticleList, ArticleListParams } from "./model";
+import type { ArticleDetail, ArticleListParams } from "./model";
 export * from "./model";
 
 /**
@@ -9,5 +9,5 @@ export * from "./model";
  * @param {Object} tag - 标签ID
  */
 export function getArticleList(params: ArticleListParams) {
-  return get<ArticleList>("/api/getArticleList", params);
+  return get<ArticleDetail[]>("/api/getArticleList", params);
 }
