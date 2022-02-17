@@ -14,6 +14,8 @@ specifiers:
   '@types/qs': ^6.9.7
   '@typescript-eslint/eslint-plugin': ~5
   '@typescript-eslint/parser': ~5
+  '@vicons/ionicons5': ^0.12.0
+  '@vicons/tabler': ^0.12.0
   '@vitejs/plugin-vue': ~2
   '@vue/eslint-config-standard': ~6.1
   '@vue/eslint-config-typescript': ~9
@@ -77,6 +79,8 @@ devDependencies:
   '@types/qs': 6.9.7
   '@typescript-eslint/eslint-plugin': 5.8.1_1aa4456757069aaf9e3fc572dfb37c43
   '@typescript-eslint/parser': 5.8.1_eslint@8.4.1+typescript@4.5.4
+  '@vicons/ionicons5': 0.12.0
+  '@vicons/tabler': 0.12.0
   '@vitejs/plugin-vue': 2.0.1_vite@2.7.9+vue@3.2.26
   '@vue/eslint-config-standard': 6.1.0_83c8d4d633c72b07c75f44a5dfc4a7fd
   '@vue/eslint-config-typescript': 9.1.0_f032d00e47d71fe308a27720bc7f47d3
@@ -2037,6 +2041,14 @@ packages:
     dependencies:
       '@typescript-eslint/types': 5.8.1
       eslint-visitor-keys: 3.1.0
+    dev: true
+
+  /@vicons/ionicons5/0.12.0:
+    resolution: {integrity: sha512-Iy1EUVRpX0WWxeu1VIReR1zsZLMc4fqpt223czR+Rpnrwu7pt46nbnC2ycO7ItI/uqDLJxnbcMC7FujKs9IfFA==}
+    dev: true
+
+  /@vicons/tabler/0.12.0:
+    resolution: {integrity: sha512-3+wUFuxb7e8OzZ8Wryct1pzfA2vyoF4lwW98O9s27ZrfCGaJGNmqG+q8A7vQ92Mf+COCgxpK+rhNPTtTvaU6qw==}
     dev: true
 
   /@vitejs/plugin-vue/2.0.1_vite@2.7.9+vue@3.2.26:

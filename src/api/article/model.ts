@@ -1,6 +1,6 @@
 import type { TagDetail, Pagination } from "../model";
 
-export interface ArticleListParams extends Pagination {
+export interface ArticleListParams extends Omit<Pagination, "total"> {
   categoryId?: string;
 }
 
@@ -17,5 +17,10 @@ export type ArticleDetail = {
   des: string;
   head_img: string;
   tag?: TagDetail[];
-  content?: string;
+  content: string;
+};
+
+export type ArticlesRes = {
+  list: ArticleDetail[];
+  pageInfo: Pagination;
 };
