@@ -34,6 +34,7 @@ export default ({ command }: ConfigEnv): UserConfigExport => {
 			}),
 			viteMockServe({
 				mockPath: 'mock',
+				watchFiles: true,
 				localEnabled: command === 'serve',
 			}),
 			PurgeIcons({

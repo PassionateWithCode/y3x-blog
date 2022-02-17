@@ -8,4 +8,5 @@ export interface TagDetail {
 export interface Pagination {
   pageSize: number;
   pageIndex: number;
+  total: number;
 }
