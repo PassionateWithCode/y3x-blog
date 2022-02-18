@@ -1,6 +1,6 @@
 <template>
   <div class="flex">
-    <n-carousel dot-placement="right" class="w-full flex-1">
+    <n-carousel autoplay :interval="3000" dot-placement="right" class="w-full flex-1">
       <div
         v-for="item in carouselData"
         :key="item.articleId"

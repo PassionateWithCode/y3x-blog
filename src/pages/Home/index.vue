@@ -13,7 +13,7 @@
 <script setup lang='ts'>
 import Banner from '@/components/Base/Banner/index.vue'
 import ArticleCard from '@/components/Base/ArticleCard/index.vue'
-import { usePullArticle, useGenerateBanner } from '@/hooks/article'
+import { usePullArticle, useGenerateBanner } from '@/hooks/useArticle'
 
 // ?文章列表部分
 const { articleList, nextPage, pageInfo } = await usePullArticle()

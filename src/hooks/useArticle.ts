@@ -5,33 +5,6 @@ import { getArticleList } from "@/api/article/index";
 import type { Pagination } from "@/api/model";
 
 /**
- * 通过文章列表生成banner
- * @param {ArticleDetail[]} param - 文章列表页数据
- */
-export function useGenerateBanner(articleList: ArticleDetail[]) {
-  const articleWall = ref<CarouselData[]>([]);
-  genArticleWall(articleList);
-  return [articleWall];
-
-  // ?utils
-  /**
-   * 处理banner头部数据
-   * @param {ArticleDetail[]} param - 文章详情列表
-   */
-  function genArticleWall(params: ArticleDetail[]) {
-    articleWall.value = params.reduce((p, c) => {
-      const newItem = {
-        articleId: c.id,
-        authorInfo: c.author,
-        headImg: c.head_img,
-        title: c.title,
-      };
-      return [...p, newItem];
-    }, [] as CarouselData[]);
-  }
-}
-
-/**
  * 获取对应分类下的文章
  * @param {string|undefined} param - 分类ID
  */
@@ -72,4 +45,31 @@ export async function usePullArticle(categoryId?: string) {
     pageInfo,
     nextPage,
   };
+}
+
+/**
+ * 通过文章列表生成banner
+ * @param {ArticleDetail[]} param - 文章列表页数据
+ */
+export function useGenerateBanner(articleList: ArticleDetail[]) {
+  const articleWall = ref<CarouselData[]>([]);
+  genArticleWall(articleList);
+  return [articleWall];
+
+  // ?utils
+  /**
+   * 处理banner头部数据
+   * @param {ArticleDetail[]} param - 文章详情列表
+   */
+  function genArticleWall(params: ArticleDetail[]) {
+    articleWall.value = params.reduce<CarouselData[]>((p, c) => {
+      const newItem = {
+        articleId: c.id,
+        authorInfo: c.author,
+        headImg: c.head_img,
+        title: c.title,
+      };
+      return [...p, newItem];
+    }, []);
+  }
 }
