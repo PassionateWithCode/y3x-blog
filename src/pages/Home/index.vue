@@ -16,7 +16,7 @@ import ArticleCard from '@/components/Base/ArticleCard/index.vue'
 import { usePullArticle, useGenerateBanner } from '@/hooks/useArticle'
 
 // ?文章列表部分
-const { articleList, nextPage, pageInfo } = await usePullArticle()
+const { articleList, nextPage, pageInfo } = await usePullArticle('文章标签123')
 
 // ?banner头部部分
 const [articleWall] = useGenerateBanner(articleList.value)
