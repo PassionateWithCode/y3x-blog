@@ -25,7 +25,8 @@
       "@/*": [
         "./src/*"
       ]
-    }
+    },
+    "skipLibCheck": true
   },
   "include": [
     "src/**/*.ts",
@@ -46,4 +47,5 @@
     "tests",
     "**/*.js"
   ],
+  
 }
