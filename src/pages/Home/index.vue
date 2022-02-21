@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 <template>
   <Banner :carousel-data="articleWall" />
   <div class="flex">
@@ -17,6 +18,9 @@ import { usePullArticle, useGenerateBanner } from '@/hooks/article'
 
 // ?文章列表部分
 const { articleList, nextPage, pageInfo } = await usePullArticle()
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+// eslint-disable-next-line no-undef
 
 // ?banner头部部分
 const [articleWall] = useGenerateBanner(articleList.value)

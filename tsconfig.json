@@ -37,12 +37,13 @@
     "src/types/**/*.ts",
     "src/utils/**/*.ts",
     "types/**/*.ts",
-    "types/**/*.d.ts"
+
   ],
   "exclude": [
     "node_modules",
     "dist",
     "public",
-    "tests"
+    "tests",
+    "**/*.js"
   ],
 }

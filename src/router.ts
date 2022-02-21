@@ -18,10 +18,12 @@ const routes = [
         component: Home,
       },
       {
+        // 错误示例1
         path: "/1",
         component: Home1,
       },
       {
+        // 错误示例2
         path: "/2",
         component: Home2,
       },
